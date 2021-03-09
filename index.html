@@ -46,12 +46,22 @@
         // Generatore di "nomi cognomi" casuali: prendendo una 
         // lista di nomi e una lista di cognomi, Gatsby vuole 
         // generare una falsa lista di invitati.
-
+        console.log("EXERCISE 2:")
         var names = ['Michele', 'Fabio', 'Roberto'];
         var lastNames = ['Forghieri', 'Papagni', 'Marazzini'];
         var randomFullNames = [ ];
 
+        // Mixing using a FOR and a random INDEX
+        for(var i=0; i<5; i++) {
+            var randomName = Math.floor(Math.random() * 3);
+            var randomLastName = Math.floor(Math.random() * 3);
+            var randomFullName = names[randomName] + " " + lastNames[randomLastName];
+            console.log(randomFullName);
+            randomFullNames.push(randomFullName);
+        }
         
+        console.log(randomFullNames);
+
     </script>
 </body>
 </html>
