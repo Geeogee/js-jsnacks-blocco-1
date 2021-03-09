@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack Block 1</title>
+</head>
+<body>
+    <script>
+
+        // Crea due array che hanno un numero di elementi diversi. 
+        // Aggiungi elementi all'array che ha meno elementi fino a 
+        // quando ne avrà tanti quanti l'altro.
+
+        console.log("EXERCISE 1:");
+        var arr1 = [ 10 ];
+        var arr2 = [ 40, 1, 12, 85, 63];
+
+        var arrLength1 = arr1.length;
+        var arrLength2 = arr2.length;
+
+        //Find the longer array
+        if(arrLength1 == arrLength2) {
+            console.log("The twwo arrays have the same amount of elements!")
+        } else if(arrLength1 > arrLength2) {
+            var shortArray = arr2;
+            var longArray = arr1;
+        } else {
+            var shortArray = arr1;
+            var longArray = arr2;
+        }
+
+        // Calculates how many elements the short array needs to reach the longer
+        var lengthDiff = longArray.length - shortArray.length;
+        console.log(lengthDiff);
+
+        // Fill the shorter array
+        for (var i=0; i<lengthDiff; i++) {
+            var value = Math.floor(Math.random() * 99) + 1;
+            shortArray.push(value);
+        }
+
+        console.log(shortArray, longArray);
+
+        // Generatore di "nomi cognomi" casuali: prendendo una 
+        // lista di nomi e una lista di cognomi, Gatsby vuole 
+        // generare una falsa lista di invitati.
+
+        var names = ['Michele', 'Fabio', 'Roberto'];
+        var lastNames = ['Forghieri', 'Papagni', 'Marazzini'];
+        var randomFullNames = [ ];
+
+        
+    </script>
+</body>
+</html>
