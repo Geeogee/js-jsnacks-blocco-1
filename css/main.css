@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#main-title {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+
+    justify-content: center;   
+}
+
+.numbers-container {
+    margin: 10px;
+    padding: 10px;
+
+    text-align: center;
+}
+
+#even-numbers {
+    color: green;
+}
+
+#odd-numbers {
+    color: red;
+}
