@@ -52,7 +52,7 @@
         var randomFullNames = [ ];
 
         // Mixing using a FOR and a random INDEX
-        for(var i=0; i<5; i++) {
+        for (var i=0; i<5; i++) {
             var randomName = Math.floor(Math.random() * 3);
             var randomLastName = Math.floor(Math.random() * 3);
             var randomFullName = names[randomName] + " " + lastNames[randomLastName];
@@ -61,6 +61,21 @@
         }
         
         console.log(randomFullNames);
+
+        // Chiedere all'utente un valore limite, poi richiedere all'utente una serie di valori
+        // finche' la somma non supera il valore limite e stampare i valori forniti dall'utente
+        console.log("Exercise 3:");
+        var maxValue = prompt("Choose the max value");
+        var sum = 0;
+        
+        while (maxValue >= sum) {
+            var value = parseInt(prompt("Insert a value to sum"));
+            console.log(value);
+            sum += value;
+        }
+
+        console.log(sum);
+
 
     </script>
 </body>
