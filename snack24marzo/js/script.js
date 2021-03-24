@@ -1,5 +1,7 @@
 
-
+// - Creare un oggetto che descriva uno studente con le
+// seguenti proprietà: nome, cognome e età. Stampare a
+// schermo attraverso il for in tutte le proprietà.
 function exercise1() {
     var student = {
         "name" : "Gioele",
@@ -66,9 +68,7 @@ function exercise3() {
 }
 
 
-// - Creare un oggetto che descriva uno studente con le
-// seguenti proprietà: nome, cognome e età. Stampare a
-// schermo attraverso il for in tutte le proprietà.
+
 function init() {
     
     // exercise1();
