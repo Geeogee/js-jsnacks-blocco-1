@@ -48,22 +48,34 @@ function exercise2() {
 // - Dare la possibilità all'utente attraverso 3 prompt di
 // aggiungere un nuovo oggetto studente inserendo
 // nell'ordine: nome, cognome e età.
-function exercise3() {
+function exercise3(student) {
 
     var name = prompt("Insert you name");
     var lastname = prompt("Insert your lastname");
     var age = parseInt(prompt("Insert your age"));
 
-    var student = {
+    var newStudent = {
 
         "name" : name,
         "lastname" : lastname,
         "age" : age
     }
 
-    console.log("Name: " + student["name"]);
-    console.log("Lastname: " + student["lastname"]);
-    console.log("Age: " + student["age"]);
+    console.log("Name: " + newStudent["name"]);
+    console.log("Lastname: " + newStudent["lastname"]);
+    console.log("Age: " + newStudent["age"]);
+
+    var students = [];
+
+    students.push(student);
+    students.push(newStudent);
+
+    for (var i=0; i<students.length; i++) {
+
+        console.log(students[i]["name"]);
+        console.log(students[i]["lastname"]);
+        console.log(students[i]["age"]);
+    }
     
 }
 
@@ -71,9 +83,9 @@ function exercise3() {
 
 function init() {
     
-    // exercise1();
+    var student = exercise1();
     // exercise2();
-    exercise3();
+    exercise3(student);
 }
 
 
