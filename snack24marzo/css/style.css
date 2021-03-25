@@ -5,12 +5,52 @@
 }
 
 
-table {
-    border: 1px dotted #000;
+body {
 
+    font-family: "Roboto", sans-serif;
 }
 
-td {
-    background-color: red;
+table {
+    
+    width: 100%;
+    min-width: 800px;
     border: 1px solid #000;
+    border-collapse: collapse; 
+}
+
+th {
+
+    width: 30%;
+    background-color: #b5ddfc; 
+}
+
+.index-th {
+
+    width: 10%;
+}
+
+td, th {
+
+    text-align: center;
+    padding: 10px;
+    border: 1px dashed #000; 
+}
+
+
+
+#result {
+
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    height: 100vh;
+}
+
+#container {
+    
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }

@@ -77,16 +77,19 @@ function exercise3(students) {
 
 
     // console.log(students);
-    var table = "<table><tr><th>Index</th><th>Name</th><th>Lastname</th><th>Age</th></tr>";
-    table += genTable(students, newStudent);
-    document.getElementById("results").innerHTML = table + "</table>";
+    
+    var table = genTable(students, newStudent);
+    document.getElementById("results").innerHTML = table;
 }
 
 function genTable(students, newStudent) {
-    var printMe = "";
+
+    var printMe = "<table><tr><th class='index-th'>Index</th><th>Name</th><th>Lastname</th><th>Age</th></tr>";
     for (var i=0; i<students.length; i++) {
+
         printMe += "<tr><td>" + i + "</td>";
         for (var j in newStudent) {
+            
             console.log("Dentro ciclo " + students[i][j]);
             printMe += "<td>" + students[i][j] + "</td>";
         }
@@ -94,6 +97,7 @@ function genTable(students, newStudent) {
         printMe += "</tr>";
     }
 
+    printMe += "</table>";
     return printMe;
 }
 
@@ -104,7 +108,6 @@ function init() {
     var student = exercise1();
     // exercise2();
     students.push(student);
-
     var button = document.getElementById("test");
     button.addEventListener("click", function() {
 
