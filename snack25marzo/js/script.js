@@ -152,7 +152,7 @@ function stringReverse() {
     //     reversed += char;
     // }
 
-    // console.log(reversed);
+    console.log(reversed);
 }
 
 
