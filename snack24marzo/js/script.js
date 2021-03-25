@@ -48,7 +48,7 @@ function exercise2() {
 // - Dare la possibilità all'utente attraverso 3 prompt di
 // aggiungere un nuovo oggetto studente inserendo
 // nell'ordine: nome, cognome e età.
-function exercise3(student) {
+function exercise3(students) {
 
     var name = prompt("Insert you name");
     var lastname = prompt("Insert your lastname");
@@ -65,27 +65,51 @@ function exercise3(student) {
     console.log("Lastname: " + newStudent["lastname"]);
     console.log("Age: " + newStudent["age"]);
 
-    var students = [];
-
-    students.push(student);
+    
     students.push(newStudent);
 
-    for (var i=0; i<students.length; i++) {
+    // for (var i=0; i<students.length; i++) {
 
-        console.log(students[i]["name"]);
-        console.log(students[i]["lastname"]);
-        console.log(students[i]["age"]);
+    //     console.log(students[i]["name"]);
+    //     console.log(students[i]["lastname"]);
+    //     console.log(students[i]["age"]);
+    // }
+
+
+    // console.log(students);
+    var table = "<table><tr><th>Index</th><th>Name</th><th>Lastname</th><th>Age</th></tr>";
+    table += genTable(students, newStudent);
+    document.getElementById("results").innerHTML = table + "</table>";
+}
+
+function genTable(students, newStudent) {
+    var printMe = "";
+    for (var i=0; i<students.length; i++) {
+        printMe += "<tr><td>" + i + "</td>";
+        for (var j in newStudent) {
+            console.log("Dentro ciclo " + students[i][j]);
+            printMe += "<td>" + students[i][j] + "</td>";
+        }
+
+        printMe += "</tr>";
     }
-    
+
+    return printMe;
 }
 
 
-
 function init() {
-    
+    var students = [];
+
     var student = exercise1();
     // exercise2();
-    exercise3(student);
+    students.push(student);
+
+    var button = document.getElementById("test");
+    button.addEventListener("click", function() {
+
+        exercise3(students);
+    });
 }
 
 
